@@ -1,10 +1,12 @@
-# Getting Started with Create React App
+# Euclidean Front End Project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was designed as the front end project to [Euclidean Project](https://github.com/mingyuanhua/euclidean).
 
-## Available Scripts
+## Client - Server communication
 
-In the project directory, you can run:
+[AJAX](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) - communicate with server
+
+Proxy Setup: Client - Proxy - Backend
 
 ### `npm start`
 
