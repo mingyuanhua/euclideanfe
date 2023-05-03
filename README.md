@@ -31,3 +31,8 @@ For loggedIn user, we want to display his favorite item list, we can achieve thi
 
 Implement a sub-component used by Favorites.js
 
+In PageHeader.js,  we replace previous ‘Favorite’ placeholder with Favorites component.
+
+Also notice the props, we have favoriteItems provided by App.js
+
+
