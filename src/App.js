@@ -1,13 +1,18 @@
 import React from 'react';
 import { Layout, layout, message } from 'antd';
+import { getFavoriteItem } from './utils';
 
 const { Header, Contest, Sider } = Layout;
 
 function App() {
   const [ loggedIn, setLoggedIn ] = useState(false)
+  const [ favoriteItems, setFavoriteItems ] = useState([])
 
   const signinOnSuccess = () => {
     setLoggedIn(true)
+    getFavoriteItem().then((data) => {
+      setFavoriteItems(data)
+    })
   }
 
   const signoutOnClick = () => {
@@ -26,6 +31,7 @@ function App() {
           loggedIn={loggedIn}
           signoutOnClick={signoutOnClick}
           signinOnSuccess={signinOnSuccess}
+          favoriteItems={favoriteItems}
         />
       </Header>
       <Layout>

@@ -35,4 +35,7 @@ In PageHeader.js,  we replace previous ‘Favorite’ placeholder with Favorites
 
 Also notice the props, we have favoriteItems provided by App.js
 
+We will fetch the favorite items after user signed in and pass it to PageHeader.js
+
+
 
