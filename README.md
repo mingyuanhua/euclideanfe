@@ -25,4 +25,9 @@ Now let’s integrate the PageHeader with App.js and test the register / login f
 
 Start backend server so we can make http requests to those API(s) built before!
 
+### Build My Favorite
+
+For loggedIn user, we want to display his favorite item list, we can achieve this by adding a My Favorite button in the page header
+
+Implement a sub-component used by Favorites.js
 
