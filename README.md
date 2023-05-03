@@ -21,3 +21,8 @@ Let’s wrap our Login and Register component as a Header which will be placed u
 Notice the 'Favorites' placeholder which we will implement after we finished our Login
 Register part.
 
+Now let’s integrate the PageHeader with App.js and test the register / login flow
+
+Start backend server so we can make http requests to those API(s) built before!
+
+

@@ -1,13 +1,32 @@
 import React from 'react';
-import { Layout, layout } from 'antd';
+import { Layout, layout, message } from 'antd';
 
 const { Header, Contest, Sider } = Layout;
 
 function App() {
+  const [ loggedIn, setLoggedIn ] = useState(false)
+
+  const signinOnSuccess = () => {
+    setLoggedIn(true)
+  }
+
+  const signoutOnClick = () => {
+    logout().then(() => {
+      setLoggedIn(false)
+      message.success('Successfully Signed out')
+    }).catch((err) => {
+      message.error(err.message)
+    })
+  }
+
   return (
     <Layout>
       <Header>
-        {'Header'}
+        <PageHeader 
+          loggedIn={loggedIn}
+          signoutOnClick={signoutOnClick}
+          signinOnSuccess={signinOnSuccess}
+        />
       </Header>
       <Layout>
         <Sider width={300} className="site-layout-background">
