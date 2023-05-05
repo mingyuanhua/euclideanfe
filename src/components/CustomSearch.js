@@ -1,11 +1,10 @@
-import { useEffect } from "react"
+import React, { useState } from "react"
 import { searchGameByName } from "../utils";
 import { Button, Form, message } from "antd";
-import CustomSearch from "./CustomSearch";
-
+import { SearchOutlined } from '@ant-design/icons';
 
 function CustormSearch({ onSuccess }) {
-    const [displayModal, setDisplayModal] = useEffect(false)
+    const [displayModal, setDisplayModal] = useState(false)
 
     const handleCancel = () => {
         setDisplayModal(false)

@@ -1,6 +1,5 @@
-import { Menu } from "antd";
-import MenuItem from "./MenuItem";
-
+import { Menu } from "antd"
+import React from 'react'
 
 const { SubMenu } = Menu
 

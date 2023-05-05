@@ -1,8 +1,10 @@
-import React from 'react';
-import { Layout, layout, message } from 'antd';
-import { getFavoriteItem } from './utils';
+import React, { useState } from 'react';
+import { Layout, message } from 'antd';
+import { logout, getFavoriteItem } from './utils';
+import PageHeader from './components/PageHeader';
+import CustomSearch from './components/CustomSearch';
 
-const { Header, Contest, Sider } = Layout;
+const { Header, Content, Sider } = Layout;
 
 function App() {
   const [ loggedIn, setLoggedIn ] = useState(false)
