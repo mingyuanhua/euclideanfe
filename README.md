@@ -53,4 +53,8 @@ Now we have the resources, either from the custom search or selecting game from 
 
 We need to build a “Home” component to display those twitch resources (streams/videos/clips) per current selected game or custom search text (on the left side bar).
 
+### Complete Add/Delete favorite item
+
+When a user clicks on the start icon on each card in the “Home” component, we need to add/remove it from the current user’s favorite list.
+
 
