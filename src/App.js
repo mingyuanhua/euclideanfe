@@ -1,9 +1,10 @@
-import React, { useState, useEffect } from 'react';
-import { Layout, message, Menu } from 'antd';
-import { LikeOutlined, FireOutlined } from '@ant-design/icons';
-import { logout, getFavoriteItem, getTopGames, searchGameById, getRecommendations } from './utils';
-import PageHeader from './components/PageHeader';
-import CustomSearch from './components/CustomSearch';
+import React, { useState, useEffect } from 'react'
+import { Layout, message, Menu } from 'antd'
+import { LikeOutlined, FireOutlined } from '@ant-design/icons'
+import { logout, getFavoriteItem, getTopGames, searchGameById, getRecommendations } from './utils'
+import PageHeader from './components/PageHeader'
+import CustomSearch from './components/CustomSearch'
+import Home from './components/Home'
 
 const { Header, Content, Sider } = Layout;
 
@@ -112,7 +113,11 @@ function App() {
               overflow: "auto"
             }}
           >
-            {'Home'}
+            <Home
+              resources={resources}
+              loggedIn={loggedIn}
+              favoriteItems={favoriteItems}
+            />
           </Content>
         </Layout>
       </Layout>
