@@ -47,5 +47,10 @@ We have built a “CustomSearch” component to support this user flow:
 - Users click on a button, a modal dialog shows up to let the user enter a text as game searching criteria.
 - Users click on a button to submit (send a request to the backend api we built before) the search text.
 
+### Build the home
+
+Now we have the resources, either from the custom search or selecting game from the top game lists.
+
+We need to build a “Home” component to display those twitch resources (streams/videos/clips) per current selected game or custom search text (on the left side bar).
 
 
