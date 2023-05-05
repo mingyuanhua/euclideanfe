@@ -38,7 +38,7 @@ function App() {
       </Header>
       <Layout>
         <Sider width={300} className="site-layout-background">
-          {'Slider'}
+          <CustomSearch onSuccess={() => { }}/>
         </Sider>
         <Layout style={{ padding: '24px' }}>
           <Content
