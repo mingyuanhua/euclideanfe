@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Layout, message, Menu } from 'antd';
-import { logout, getFavoriteItem, getTopGames } from './utils';
+import { LikeOutlined, FireOutlined } from '@ant-design/icons';
+import { logout, getFavoriteItem, getTopGames, searchGameById, getRecommendations } from './utils';
 import PageHeader from './components/PageHeader';
 import CustomSearch from './components/CustomSearch';
 
@@ -45,6 +46,19 @@ function App() {
     setResources(data)
   }
 
+  const onGameSelect = ({ key }) => {
+    if (key == 'recommendation') {
+      getRecommendations().then((data) => {
+        setResources(data)
+      })
+      return
+    }
+
+    searchGameById(key).then((data) => {
+      setResources(data)
+    })
+  }
+
   const mapTopGamesToProps = (topGames) => [
     {
       label: 'Recommend for you!',
@@ -83,7 +97,7 @@ function App() {
           <CustomSearch onSuccess={customSearchOnSuccess}/>
           <Menu
             mode='inline'
-            onSelect={() => {}}
+            onSelect={onGameSelect}
             style={{ marginTop: '10px' }}
             items={mapTopGamesToProps(topGames)}
           />
