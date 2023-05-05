@@ -10,6 +10,11 @@ function App() {
   const [ loggedIn, setLoggedIn ] = useState(false)
   const [ favoriteItems, setFavoriteItems ] = useState([])
   const [ topGames, setTopGames ] = useState([])
+  const [ resources, setResources ] = useState({
+    VIDEO: [],
+    STREAM: [],
+    CLIP: [],
+  })
 
   useEffect(() => {
     getTopGames()
@@ -34,6 +39,10 @@ function App() {
     }).catch((err) => {
       message.error(err.message)
     })
+  }
+
+  const customSearchOnSuccess = (data) => {
+    setResources(data)
   }
 
   const mapTopGamesToProps = (topGames) => [
@@ -71,7 +80,7 @@ function App() {
       </Header>
       <Layout>
         <Sider width={300} className="site-layout-background">
-          <CustomSearch onSuccess={() => { }}/>
+          <CustomSearch onSuccess={customSearchOnSuccess}/>
           <Menu
             mode='inline'
             onSelect={() => {}}

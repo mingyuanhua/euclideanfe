@@ -41,4 +41,11 @@ We will fetch the favorite items after user signed in and pass it to PageHeader.
 
 Next, we will show top games on the side bar, and also support custom search.
 
+### Update Custom search
+
+We have built a “CustomSearch” component to support this user flow:
+- Users click on a button, a modal dialog shows up to let the user enter a text as game searching criteria.
+- Users click on a button to submit (send a request to the backend api we built before) the search text.
+
+
 
