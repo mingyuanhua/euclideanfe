@@ -1,4 +1,3 @@
-
 import { Layout, Row, Col, Button } from "antd"
 import Favorites from './Favorites'
 import Register from './Register'

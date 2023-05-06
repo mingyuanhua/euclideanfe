@@ -6,7 +6,7 @@ import PageHeader from './components/PageHeader'
 import CustomSearch from './components/CustomSearch'
 import Home from './components/Home'
 
-const { Header, Content, Sider } = Layout;
+const { Content, Sider } = Layout;
 
 function App() {
   const [ loggedIn, setLoggedIn ] = useState(false)
@@ -95,17 +95,15 @@ function App() {
 
   return (
     <Layout>
-      <Header>
-        <PageHeader 
-          loggedIn={loggedIn}
-          signoutOnClick={signoutOnClick}
-          signinOnSuccess={signinOnSuccess}
-          favoriteItems={favoriteItems}
-        />
-      </Header>
+      <PageHeader
+        loggedIn={loggedIn}
+        signoutOnClick={signoutOnClick}
+        signinOnSuccess={signinOnSuccess}
+        favoriteItems={favoriteItems}
+      />
       <Layout>
-        <Sider width={300} className="site-layout-background">
-          <CustomSearch onSuccess={customSearchOnSuccess}/>
+        <Sider width={300} className='site-layout-background'>
+          <CustomSearch onSuccess={customSearchOnSuccess} />
           <Menu
             mode='inline'
             onSelect={onGameSelect}
@@ -120,7 +118,7 @@ function App() {
               padding: 24,
               margin: 0,
               height: 800,
-              overflow: "auto"
+              overflow: 'auto'
             }}
           >
             <Home
