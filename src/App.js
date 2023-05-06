@@ -52,6 +52,7 @@ function App() {
       getRecommendations().then((data) => {
         setResources(data)
       })
+      
       return
     }
 
