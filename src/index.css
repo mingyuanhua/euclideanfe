@@ -1,11 +1,12 @@
-@import '~antd/dist/antd.css';
+@import '~antd/dist/antd.dark.css';
 
 .site-layout-background {
-  background: #fff;
+  background: rgba(28, 27, 27, 0.769);
+  height: 90vh;
 }
 
 .site-top-game-list ul {
-  max-height: 700px;
+  height: 80vh;
   overflow-y: auto;
   overflow-x: hidden;
 }
