@@ -18,7 +18,7 @@ function Login({ onSuccess }) {
         login(data)
             .then((data) => {
                 setDisplayModal(false)
-                message.success(`Welcome back, ${data.name}`)
+                message.success(`Welcome back, ${data.userId}`)
                 onSuccess()
             }).catch((err) => {
                 message.error(err.message)

@@ -64,7 +64,7 @@ function Register() {
                         name='last_name'
                         rules={[{ require: true, message: 'Please input your Lastname!' }]}
                     >
-                        <Input placeholder='lsstname' />
+                        <Input placeholder='lastname' />
                     </Form.Item>
                     <Form.Item>
                         <Button type='primary' htmlType='submit'>
