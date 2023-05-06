@@ -44,25 +44,25 @@ function Register() {
                 >
                     <Form.Item
                         name='user_id'
-                        rules={{ require: true, message: 'Please input your Username!' }}
+                        rules={[{ require: true, message: 'Please input your Username!' }]}
                     >
                         <Input prefix={<UserOutlined />} placeholder='Username' />
                     </Form.Item>
                     <Form.Item
                         name='password'
-                        rules={{ require: true, message: 'Please input your Password!' }}
+                        rules={[{ require: true, message: 'Please input your Password!' }]}
                     >
                         <Input prefix={<LockOutlined />} placeholder='Password' />
                     </Form.Item>
                     <Form.Item
                         name='first_name'
-                        rules={{ require: true, message: 'Please input your Firstname!' }}
+                        rules={[{ require: true, message: 'Please input your Firstname!' }]}
                     >
                         <Input placeholder='firstname' />
                     </Form.Item>
                     <Form.Item
                         name='last_name'
-                        rules={{ require: true, message: 'Please input your Lastname!' }}
+                        rules={[{ require: true, message: 'Please input your Lastname!' }]}
                     >
                         <Input placeholder='lsstname' />
                     </Form.Item>
