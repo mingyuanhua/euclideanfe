@@ -1,10 +1,12 @@
-import { Menu } from "antd"
-import React from 'react'
+import React, { useState } from 'react'
+import MenuItem from './MenuItem'
+import { Menu, Button, Drawer } from 'antd'
+import { EyeOutlined, YoutubeOutlined, VideoCameraOutlined, StarFilled } from '@ant-design/icons'
 
 const { SubMenu } = Menu
 
 function Favorites({ favoriteItems }) {
-    const [displayDrawer, setDisplayDrawer] = useEffect(false)
+    const [displayDrawer, setDisplayDrawer] = useState(false)
     const { VIDEO, STREAM, CLIP } = favoriteItems
 
     const onDrawerClose = () => {
@@ -47,3 +49,5 @@ function Favorites({ favoriteItems }) {
         </>
     )
 }
+
+export default Favorites

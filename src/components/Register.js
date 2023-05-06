@@ -1,10 +1,10 @@
-import { Form, message } from "antd"
-import { useEffect } from "react"
-import { UserOutlined } from "@ant";
-
+import { Button, Form, Input, message, Modal } from 'antd'
+import React, { useState } from 'react'
+import { LockOutlined, UserOutlined } from '@ant-design/icons'
+import { register } from '../utils'
 
 function Register() {
-    const [displayModal, setDisplayModal] = useEffect(false)
+    const [displayModal, setDisplayModal] = useState(false)
 
     const handleCancel = () => {
         setDisplayModal(false)

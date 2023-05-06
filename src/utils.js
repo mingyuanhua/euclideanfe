@@ -140,7 +140,7 @@ export const getRecommendations = () => {
     return fetch(getRecommendedItemsUrl, {
         credentials: 'include'
     }).then((response) => {
-        if (reponse.status !== 200) {
+        if (response.status !== 200) {
             throw Error('Fail to get recommended item');
         }
         return response.json();

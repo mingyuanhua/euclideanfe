@@ -1,9 +1,9 @@
 import React, { useState } from "react"
-import { searchGameByName } from "../utils";
-import { Button, Form, message } from "antd";
-import { SearchOutlined } from '@ant-design/icons';
+import { searchGameByName } from '../utils'
+import { message, Button, Modal, Form, Input } from 'antd'
+import { SearchOutlined } from '@ant-design/icons'
 
-function CustormSearch({ onSuccess }) {
+function CustomSearch({ onSuccess }) {
     const [displayModal, setDisplayModal] = useState(false)
 
     const handleCancel = () => {
