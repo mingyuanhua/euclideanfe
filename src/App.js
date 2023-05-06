@@ -48,7 +48,7 @@ function App() {
   }
 
   const onGameSelect = ({ key }) => {
-    if (key == 'recommendation') {
+    if (key === 'recommendation') {
       getRecommendations().then((data) => {
         setResources(data)
       })
@@ -126,8 +126,8 @@ function App() {
             <Home
               resources={resources}
               loggedIn={loggedIn}
-              favoriteOnChange={favoriteOnChange}
               favoriteItems={favoriteItems}
+              favoriteOnChange={favoriteOnChange}
             />
           </Content>
         </Layout>
