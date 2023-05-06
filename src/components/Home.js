@@ -4,6 +4,7 @@ import { StarOutlined, StarFilled } from '@ant-design/icons'
 import { addFavoriteItem, deleteFavoriteItem } from '../utils';
 
 const { TabPane } = Tabs
+
 const tabKeys = {
     Streams: 'stream',
     Videos: 'videos',
@@ -11,10 +12,10 @@ const tabKeys = {
 }
 
 const processUrl = (url) => url
-    .replace('%{height}', '252')
-    .replace('%{width}', '480')
-    .replace('{height}', '252')
-    .replace('{width}', '480')
+  .replace('%{height}', '252')
+  .replace('%{width}', '480')
+  .replace('{height}', '252')
+  .replace('{width}', '480')
 
 const renderCardTitle = (item, loggedIn, favs = [], favOnChange) => {
     const title = `${item.broadcaster_name} - ${item.title}`;
@@ -90,7 +91,7 @@ const renderCardGrid = (data, loggedIn, favs, favOnChange) => {
     )
 }
 
-const Home = (( resources, loggedIn, favoriteItems, favoriteOnChange ) => {
+const Home = ({ resources, loggedIn, favoriteItems, favoriteOnChange }) => {
     const { VIDEO, STREAM, CLIP } = resources
     const { VIDEO: favVideos, STREAM: favStreams, CLIP: favClips } = favoriteItems
 
@@ -107,6 +108,6 @@ const Home = (( resources, loggedIn, favoriteItems, favoriteOnChange ) => {
             </TabPane>
         </Tabs>
     )
-})
+}
 
 export default Home
