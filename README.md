@@ -57,4 +57,6 @@ We need to build a “Home” component to display those twitch resources (strea
 
 When a user clicks on the start icon on each card in the “Home” component, we need to add/remove it from the current user’s favorite list.
 
+Then in app
+Every time when the user sends a request to add/remove items from the favorite item list, we shall reload the favorite item list from the server again to get the latest data.
 

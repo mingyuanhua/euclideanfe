@@ -60,6 +60,15 @@ function App() {
     })
   }
 
+  const favoriteOnChange = () => {
+    getFavoriteItem()
+      .then((data) => {
+        setFavoriteItems(data)
+      }).catch((err) => {
+        message.error(err.message)
+      })
+  }
+
   const mapTopGamesToProps = (topGames) => [
     {
       label: 'Recommend for you!',
@@ -116,6 +125,7 @@ function App() {
             <Home
               resources={resources}
               loggedIn={loggedIn}
+              favoriteOnChange={favoriteOnChange}
               favoriteItems={favoriteItems}
             />
           </Content>
